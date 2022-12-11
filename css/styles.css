@@ -113,7 +113,7 @@ h1 {
   }
   
   .certs li img {
-    float: left;
+    float: center;
     margin: 0 15px 0 0;
     border-radius: 20%;
   }
