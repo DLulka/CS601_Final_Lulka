@@ -1,0 +1,47 @@
+[
+    {
+        "certification": "Scrum Developer Certified (SDC)",
+        "school": "SCRUMstudy",
+        "issued": "May 2020"
+    },
+    {
+        "certification": "Functional Programming Principles in Scala",
+        "school": "Ecole Politechnique Federale de Lausanne",
+        "issued": "March 2019"
+    },
+    {
+        "certification": "Programming for Everybody (Getting Started with Python)",
+        "school": "University of Michigan",
+        "issued": "December 2019"
+    },
+    {
+        "certification": "Python Data Structures",
+        "school": "University of Michigan",
+        "issued": "January 2020"
+    },
+    {
+        "certification": "Using Python to Access Web Data",
+        "school": "University of Michigan",
+        "issued": "April 2020"
+    },
+    {
+        "certification": "Using Databases with Python",
+        "school": "University of Michigan",
+        "issued": "May 2020"
+    },
+    {
+        "certification": "Python for Everybody",
+        "school": "University of Michigan",
+        "issued": "June 2020"
+    },
+    {
+        "certification": "Capstone: Retrieving, Processing and Visualizing Data with Python",
+        "school": "University of Michigan",
+        "issued": "June 2020"
+    },
+    {
+        "certification": "Introduction to Software Testing",
+        "school": "University of Minnesota",
+        "issued": "October 2020"
+    }
+]

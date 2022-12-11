@@ -97,42 +97,53 @@ h1 {
     text-align: justify;
   }
 
-  table {
-      border-collapse: collapse;
-      margin: 25px 0;
-      font-size: 0.9em;
-      font-family: Arial, Helvetica, sans-serif;
-      min-width: 400px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-      margin-left: auto;
-      margin-right: auto;
+  div {
+    margin: 20px;
   }
-
-  thead tr{
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
+  
+  ul {
+    list-style-type: none;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  th, td{
-    padding: 12px 15px;
+  
+  h3 {
+    font: bold 32px Helvetica, Verdana, sans-serif;
   }
-
-  tbody tr {
-    border-bottom: 1px solid #dddddd;
-}
-
- tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-
-tbody tr:nth-of-type(odd) {
-  color: #dddddd;
-}
-
- tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-}
+  
+  li img {
+    float: left;
+    margin: 0 15px 0 0;
+    border-radius: 20%;
+  }
+  
+  li p {
+    font: 20px Georgia, Verdana, serif;
+  }
+  
+  li {
+    padding: 10px;
+    overflow: auto;
+  }
+  
+  li:hover {
+    background: #eee;
+    cursor: pointer;
+  }
+  
+  .show {
+    display: none;
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: black;
+    text-decoration: none;
+  }
 
 video {
   display: block;
