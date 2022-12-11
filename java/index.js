@@ -95,7 +95,7 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
             document.getElementById("Pemail").style.color = 'red';
         } else if (!value.match(regextest)){
             document.getElementById("Pemail").innerHTML = "Please make sure you are typing your email as anystring@anystring.any. " + value + " is not valid";
-            document.getElementById("Pemail").style.color = 'black';
+            document.getElementById("Pemail").style.color = 'red';
         }
         else {
             document.getElementById("Pemail").innerHTML = "Thank you! I will be emailing you back at: " + value;
