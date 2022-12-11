@@ -55,7 +55,7 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
     
     
        
-       function validateName(FirstOrLast, PForL) {
+    function validateName(FirstOrLast, PForL) {
         alert("Validating name");
         var FoLname = document.getElementById(FirstOrLast);
         var value = FoLname.value;
@@ -87,7 +87,7 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
         }
        }
     
-       function  validateEmail() {
+    function  validateEmail() {
         var email = document.getElementById("email");
         var value = email.value;
         var regextestemail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
