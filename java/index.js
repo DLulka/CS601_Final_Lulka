@@ -48,7 +48,7 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
     }
 
     //contact.html
-    window.onload = function() {
+    function disableSubmit() {
         document.getElementById("submit").disabled = true;
         document.getElementById("submit").style.backgroundColor = 'gray';
        }
