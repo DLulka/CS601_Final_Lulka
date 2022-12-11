@@ -11,62 +11,82 @@
           <div class="nav">
             <ul>
               <li><a href="home.html">Home</a></li>
-              <li><a href="rm.html">Real Madrid</a></li>
               <li><a class="active" href="work.html">Work</a></li>
+              <li><a href="cert.html">Certifications</a></li>
+              <li><a href="rm.html">Real Madrid</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div> 
         </header>
         <main>
-          <h1> Work</h1>
-          <img class="roundbrimg" src="images/Datio.JPG" alt="Daniel at Datio">
-          <p> Even though I am working as an elementary school teacher right now, my last IT-related job was at Datio. Datio is a Big Data start-up that was created by the Spanish bank BBVA and Stratio. 
-              I started working as Platform support. We worked with DC/OS for the use of Data as a Service (DaaS) in Spain, Mexico, the US, Colombia, Argentina, and Peru regarding the creation and management 
-              of service and nominal accounts, new Sandboxes on development and live environments (HDFS), data ingestion and extraction of data with Agile framework.   </p>
-          <p> After a year I got promoted to Quality Assurance Specialist. This role had three primary responsibilities. The first one was making the required upgrades to the platform alongside the deployment team. 
-              These changes kept the platform optimized and running jobs as efficiently as possible. The second responsibility was making sure three teams of developers complied with the required quality standards 
-              by validating their Scala and Python pull requests and aiding them with their questions. If a learning opportunity was discovered, courses provided by Datio were scheduled. The third responsibility was 
-              to provide help during platform interventions, which could be off-hours, to validate the correct functionality of the changed piece.   </p>
-          <p> If you want to learn more about Datio, make sure you visit their webapage by clicking on the image below. Please note it is in Spanish.</p>
-          <a href="https://www.datio.com/" target="_blank"><img src="images/Datiologo.jpg" alt="Datio logo link"></a>
-          <p>Some years before working at Datio, I also worked for a company called “CompuCom”. I spent six years with them, three of them as Team Manager which was the role that I enjoyed the most. Below is a table 
-              with the contracts I worked on, as well as the year and where they were located.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Company</th>
-                <th>Location</th>
-                <th>Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Winn Dixie</td>
-                <td>Florida</td>
-                <td>2006</td>
-              </tr>
-              <tr>
-                <td>Giant Eagle</td>
-                <td>Pittsburgh</td>
-                <td>2007</td>
-              </tr>
-              <tr>
-                  <td>Levis</td>
-                  <td>California</td>
-                  <td>2008</td>
-                </tr>
+          <div id="app">
+            <h1> {{ work }}</h1>
+            <img class="roundbrimg" :src="datio" alt="Daniel at Datio" />
+            <p> Even though I am working as an elementary school teacher right now, my last IT-related job was at Datio. Datio is a Big Data start-up that was created by the Spanish bank BBVA and Stratio. 
+                I started working as Platform support. We worked with DC/OS for the use of Data as a Service (DaaS) in Spain, Mexico, the US, Colombia, Argentina, and Peru regarding the creation and management 
+                of service and nominal accounts, new Sandboxes on development and live environments (HDFS), data ingestion and extraction of data with Agile framework.   </p>
+            <p> After a year I got promoted to Quality Assurance Specialist. This role had three primary responsibilities. The first one was making the required upgrades to the platform alongside the deployment team. 
+                These changes kept the platform optimized and running jobs as efficiently as possible. The second responsibility was making sure three teams of developers complied with the required quality standards 
+                by validating their Scala and Python pull requests and aiding them with their questions. If a learning opportunity was discovered, courses provided by Datio were scheduled. The third responsibility was 
+                to provide help during platform interventions, which could be off-hours, to validate the correct functionality of the changed piece.   </p>
+            <p> If you want to learn more about Datio, make sure you visit their webapage by clicking on the image below. Please note it is in Spanish.</p>
+            <a v-bind:href="linkDatio"><img :src="datioLogo" alt="Datio logo link" /></a>
+            <p>Some years before working at Datio, I also worked for a company called “CompuCom”. I spent six years with them, three of them as Team Manager which was the role that I enjoyed the most. Below is a table 
+                with the contracts I worked on, as well as the year and where they were located.</p>
+            <table>
+              <thead>
                 <tr>
-                  <td>First Group America</td>
-                  <td>Cincinnati</td>
-                  <td>2009</td>
+                  <th v-for="col in columns">{{col}}</th>
                 </tr>
-                <tr>
-                  <td>Suncor</td>
-                  <td>Canada</td>
-                  <td>2010</td>
+              </thead>
+              <tbody>
+                <tr v-for="row in rows">
+                  <td v-for="col in columns">{{row[col]}}</td>
                 </tr>
-            </tbody>
+              </tbody>
             </table>
+            </div>
+            <script>
+              var app = new Vue({
+                  el: '#app',
+                  data: {
+                      work: 'This is my resume page',
+                      linkDatio: 'https://www.datio.com/',
+                      logoSrc: 'images/Datio.jpg',
+                      logoSrc: 'images/Datiologo.jpg',
+                      rows: [
+                      { company: "Winn Dixie", location: 'Florida', year: '2006' },
+                      { company: "Giant Eagle", location: 'Pittsburgh', year: '2007' },
+                      { company: "Levis", location: 'California', year: '2008' },
+                      { company: "First Group America", location: 'Cincinnati', year: '2009' },
+                      { company: "Suncor", location: 'Canada', year: '2010' }
+                    ]
+                  },
+                  computed: {
+                    "columns": function columns() {
+                      if (this.rows.length == 0) {
+                        return [];
+                      }
+                      return Object.keys(this.rows[0])
+                    },
+                  prerequisites: [
+                          'CS200',
+                          'CS231',
+                          'CS232',
+                          'CS300'
+                      ],
+                      fontStyle: 'italic',
+                      fontWeight: 'bold',
+                      fontColor: '#dc143c'
+                  },
+                  methods: {
+                  goToStudentLink: function() {
+                      alert('You will be redirected to Student Link.')
+                      window.location.href = 'https://www.bu.edu/studentlink'
+                  }
+              }
+              })
+           </script>
           </main>
           <footer>
             <p> Check out my <a href="https://www.linkedin.com/in/daniel-lulka-6942a1173/" target="_blank">LinkedIn</a> profile! </p> 
