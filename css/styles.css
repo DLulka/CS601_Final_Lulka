@@ -198,6 +198,10 @@ label {
   display: inline-block;
   width: 300px;
   text-align: left;
+  color:aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
+  text-align: justify;
 }
 
 input,
@@ -218,11 +222,4 @@ input[type="submit"] {
   width: 310px;
   color: white;
   border-radius: 0.25em;
-}
-
-.form p {
-  color:aliceblue;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.4em;
-  text-align: justify;
 }
