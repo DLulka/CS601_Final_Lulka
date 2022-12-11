@@ -112,22 +112,22 @@ h1 {
     font: bold 32px Helvetica, Verdana, sans-serif;
   }
   
-  li img {
+  .certs li img {
     float: left;
     margin: 0 15px 0 0;
     border-radius: 20%;
   }
   
-  li p {
+  .certs li p {
     font: 20px Georgia, Verdana, serif;
   }
   
-  li {
+  .certs li {
     padding: 10px;
     overflow: auto;
   }
   
-  li:hover {
+  .certs li:hover {
     background: #eee;
     cursor: pointer;
   }
