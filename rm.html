@@ -10,41 +10,60 @@
         <header>
             <div class="nav">
                 <ul>
-                  <li><a href="home.html">Home</a></li>
-                  <li><a class="active" href="rm.html">Real Madrid</a></li>
-                  <li><a href="work.html">Work</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="cert.html">Certifications</a></li>
+                    <li><a class="active" href="rm.html">Real Madrid</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
               </div> 
         </header>
         <main>
-            <h1> Hala Madrid!</h1>
-            <img class="roundbrimg" src="images/MeBernabeu.JPG" alt="Daniel in Santiago Bernabeu">
-            <p> I have been a Real Madrid fan for more than 20 years. My love for Real Madrid stems from another of my hobbies, video games. The world cup was about to begin, and my best friend was already 
-                a big Merengue fan and suggested we played the FIFA World Cup game. I had never played a soccer video game, let alone watch an entire game, but I agreed because he was super excited for Spain’s 
-                striker, Raul.  As we played together the video game, I started learning about the teams and their top players, especially Real Madrid.  Eventually, I got curious and started watching the World Cup, 
-                following Spain, since most of its players played in “La Liga”, which is the league where Real Madrid plays.  </p>
-            <p> In the video below, you can watch the best goals of my favorite soccer player of all time, Raul. The goals are from when he was playing for Real Madrid. He scored a total of 323 goals for Real Madrid and 44 for Spain.   </p>
-                <video controls muted title="Raul's best goals!">
-                    <source src="videos/RaulGoals.mp4" type="video/mp4">
-                    <source src="videos/RaulGoals.ogv" type="video/ogv">
-                Your browser does not support the video tag.
-                </video>
-            <p> I started watching all the games of “The Galactics”, which was the nickname that the team had. Some of my favorite players of that time were: </p>
-            <div class="rm">
-                <ul>
-                    <li>Raul</li>
-                    <li>Figo</li>
-                    <li>Makelele</li>
-                    <li>Zidane</li>
-                    <li>Ronaldo</li>
-                    <li>Beckham</li>
-                    <li>Ramos</li>
-                    <li>Casillas</li>
-                </ul>
+            <div id="app">
+                <h1> {{ madrid }}</h1>
+                <img class="roundbrimg" :src="meMadrid" alt="Daniel at Bernabeu" />
+                <p> I have been a Real Madrid fan for more than 20 years. My love for Real Madrid stems from another of my hobbies, video games. The world cup was about to begin, and my best friend was already 
+                    a big Merengue fan and suggested we played the FIFA World Cup game. I had never played a soccer video game, let alone watch an entire game, but I agreed because he was super excited for Spain’s 
+                    striker, Raul.  As we played together the video game, I started learning about the teams and their top players, especially Real Madrid.  Eventually, I got curious and started watching the World Cup, 
+                    following Spain, since most of its players played in “La Liga”, which is the league where Real Madrid plays.  </p>
+                <p> In the video below, you can watch the best goals of my favorite soccer player of all time, Raul. The goals are from when he was playing for Real Madrid. He scored a total of 323 goals for Real Madrid and 44 for Spain.   </p>
+                    <video controls muted title="Raul's best goals!">
+                        <source src="videos/RaulGoals.mp4" type="video/mp4">
+                        <source src="videos/RaulGoals.ogv" type="video/ogv">
+                    Your browser does not support the video tag.
+                    </video>
+                <p> I started watching all the games of “The Galactics”, which was the nickname that the team had. Some of my favorite players of that time were: </p>
+                <div class="rm">
+                    <ul>
+                        <li v-for="player in players">{{ player }}</li>
+                    </ul>
+                </div>
+                <p> If you want to learn more about Real Madrid, make sure you visit their webapage by clicking on the image below.</p>
+                <a href="https://www.realmadrid.com/en" target="_blank"><img src="images/RMLogo.jpeg" alt="Real Madrid logo link"></a>
+    
             </div>
-            <p> If you want to learn more about Real Madrid, make sure you visit their webapage by clicking on the image below.</p>
-            <a href="https://www.realmadrid.com/en" target="_blank"><img src="images/RMLogo.jpeg" alt="Real Madrid logo link"></a>
+            <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+            <script>
+              var app = new Vue({
+                  el: '#app',
+                  data: {
+                      madrid: 'Hala Madrid!',
+                      meMadrid: 'images/MeBernabeu.JPG',
+                      datio: 'images/Datio.JPG',
+                      datioLogo: 'images/Datiologo.jpg',
+                      players: [
+                        'Raul',
+                        'Figo',
+                        'Makelele',
+                        'Zidane',
+                        'Ronaldo',
+                        'Beckham',
+                        'Ramos',
+                        'Casillas',
+                    ],
+                },
+              })
+           </script>
         </main>
         <footer>
             <p> Check out my <a href="https://www.linkedin.com/in/daniel-lulka-6942a1173/" target="_blank">LinkedIn</a> profile! </p> 
