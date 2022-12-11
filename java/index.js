@@ -46,3 +46,4 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
                 console.log(error);
               });
     }
+getinfo();
