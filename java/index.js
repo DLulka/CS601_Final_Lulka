@@ -77,7 +77,7 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
             document.getElementById(PForL).innerHTML = "That is a lovely last name, " + value;
             document.getElementById(PForL).style.color = 'green';
         }
-        if (document.getElementById("PFirstName").style.color == 'green' && document.getElementById("PLastName").style.color == 'green' && document.getElementById("PEmail").style.color == 'green'){
+        if (document.getElementById("PFirstName").style.color == 'green' && document.getElementById("PLastName").style.color == 'green' && document.getElementById("Pemail").style.color == 'green'){
             document.getElementById("submit").disabled = false;
             document.getElementById("submit").style.backgroundColor = 'blue';
         } else {
@@ -89,11 +89,10 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
     function  validateEmail() {
         var email = document.getElementById("email");
         var value = email.value;
-        alert(value);
         var regextest = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (value == "") {
             document.getElementById("Pemail").innerHTML = "Please make sure there is a @ and that the domain includes a dot.";
-            document.getElementById("Pemail").style.color = 'black';
+            document.getElementById("Pemail").style.color = 'red';
         } else if (!value.match(regextest)){
             document.getElementById("Pemail").innerHTML = "Please make sure you are typing your email as anystring@anystring.any. " + value + " is not valid";
             document.getElementById("Pemail").style.color = 'black';
