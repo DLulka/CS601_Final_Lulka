@@ -197,7 +197,6 @@ form div + div {
 label {
   display: inline-block;
   width: 300px;
-  text-align: left;
   color:rgb(160, 236, 38);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.4em;
@@ -230,6 +229,8 @@ table {
   border-collapse: collapse;
   border: 3px solid #44475C;
   margin: 10px 10px 0 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table th {
@@ -244,10 +245,7 @@ table th {
 table td {
   text-align: left;
   padding: 8px;
-  border-right: 2px solid #7D82A8;
-}
-table td:last-child {
-  border-right: none;
+  border-right: 2px solid #fd0808;
 }
 table tbody tr:nth-child(2n) td {
   background: #D4D8F9;
