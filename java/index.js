@@ -55,7 +55,7 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
     
     
        
-       function  validateName(FirstOrLast, PForL) {
+       function validateName(FirstOrLast, PForL) {
         alert("Validating name");
         var FoLname = document.getElementById(FirstOrLast);
         var value = FoLname.value;
@@ -90,11 +90,11 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
        function  validateEmail() {
         var email = document.getElementById("email");
         var value = email.value;
-        var regextest = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        var regextestemail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (value == "") {
             document.getElementById("Pemail").innerHTML = "Please make sure there is a @ and that the domain includes a dot.";
             document.getElementById("Pemail").style.color = 'black';
-        } else if (!value.match(regextest)){
+        } else if (!value.match(regextestemail)){
             document.getElementById("Pemail").innerHTML = "Please make sure you are typing your email as anystring@anystring.any. " + value + " is not valid";
             document.getElementById("Pemail").style.color = 'black';
         }
