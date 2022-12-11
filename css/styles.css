@@ -101,7 +101,7 @@ h1 {
     margin: 20px;
   }
   
-  ul {
+  .certs ul {
     list-style-type: none;
     width: 700px;
     margin-left: auto;
