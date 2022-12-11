@@ -11,8 +11,9 @@
             <div class="nav">
                 <ul>
                   <li><a href="home.html">Home</a></li>
-                  <li><a href="rm.html">Real Madrid</a></li>
                   <li><a href="work.html">Work</a></li>
+                  <li><a href="cert.html">Certifications</a></li>
+                  <li><a href="rm.html">Real Madrid</a></li>
                   <li><a class="active" href="contact.html">Contact</a></li>
                 </ul>
               </div> 
@@ -20,7 +21,50 @@
         <main>
           <h1> Contact me! </h1>
           <img class="roundimg" src="images/Me2.JPG" alt="Daniel at Anahuac">
-          <p> Let's connect. Please use any of the means below to contact me.</p>
+          <p> Let's connect. Use the form below to send me an email.</p>
+          <form name="DanielsForm" method="post" action="mailto:lulka@bu.edu">
+            <div>
+              <label>First name (required):</label>
+              <input type="text" name="firstName" id="firstName" required autofocus onkeyup="validateName(name, 'PFirstName')">
+              <p id="PFirstName">Please make sure that you type at least 2 letters. Only A-Z and a-z permitted.</p>
+            </div>
+            <div>
+              <label>Last name (required):</label>
+              <input type="text" name="lastName" id="lastName" required onkeyup="validateName(name, 'PLastName')">
+              <p id="PLastName">Please make sure that you type at least 2 characters. Only A-Z and a-z permitted.</p>
+            </div>
+            <div>
+              <label>Email address (required):</label>
+              <input type="text" name="email" id="email" required onkeyup="validateEmail()">
+              <p id="PEmail">Please make sure there is a @ and that the domain includes a dot.</p>
+            </div>
+            <div>
+              <fieldset>
+                  <legend> What is your favorite videogame console?</legend>
+                  <input type="radio" id="Playstation_5" name="consoles" value="Playstation_5">
+                  <label for="Playstation_5">Playstation 5</label><br>
+                  <input type="radio" id="Xbox_X" name="consoles" value="Xbox_X">
+                  <label for="Xbox_X">Xbox X</label><br>
+                  <input type="radio" id="Nintendo_Switch" name="consoles" value="Nintendo_Switch">
+                  <label for="Nintendo_Switch">Nintendo Switch</label><br>
+              </fieldset>
+            </div>
+              <div>
+              <fieldset>
+                  <legend> What is your favorite videogame genre?</legend>
+                  <input type="checkbox" id="RPG" name="genre" value="RPG">
+                  <label for="RPG"> RPG</label><br>
+                  <input type="checkbox" id="FPS" name="genre" value="FPS">
+                  <label for="FPS"> FPS</label><br>
+                  <input type="checkbox" id="Sports" name="genre" value="Sports">
+                  <label for="Sports"> Sports</label><br>
+              </fieldset>
+            </div>
+            <div>
+              <input type="submit" id="submit" value="Submit">
+            </div>
+          </form>
+
           <address>
             Email me: <a href="mailto:lulka@bu.edu">lulka@bu.edu</a><br> 
             Or message me or call me: <a href="tel:+16823004863">682-300-4863</a><br>

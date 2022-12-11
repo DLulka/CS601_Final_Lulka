@@ -178,3 +178,44 @@ address {
   font-size: 1.4em;
   text-decoration-style: wavy;
 }
+
+form {
+  width: 400px;
+  padding: 1em;
+  border: 2px solid #000;
+  border-radius: 1em;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 300px;
+  text-align: left;
+}
+
+input,
+textarea {
+  font: 1.3em sans-serif;
+  width: 300px;
+  border: 1px solid #999;
+  padding: 3px;
+  background-color: bisque;
+}
+
+fieldset {
+  margin-bottom: 1em;
+}
+
+input[type="submit"] {
+  border: 2px solid black;
+  width: 310px;
+  color: white;
+  border-radius: 0.25em;
+}
