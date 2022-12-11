@@ -6,7 +6,7 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
             })
             .then((data) => {
                 document.getElementById("show").style.display = "block";
-                let getCert = certs => certs.cert;
+                let getCert = certs => certs.certification;
                 let certNames = data.map(getCert);
                 let getSchool = certs => certs.school;
                 let school = data.map(getSchool);
