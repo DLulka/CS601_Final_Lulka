@@ -132,15 +132,11 @@ h1 {
     cursor: pointer;
   }
   
-  .show {
-    display: none;
-  }
-  
-  a:link {
+  .certs a:link {
     text-decoration: none;
   }
   
-  a:visited {
+  .certs a:visited {
     color: black;
     text-decoration: none;
   }
