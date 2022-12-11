@@ -47,6 +47,4 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/degree.json';
               });
     }
 
-    function main() {
-        getinfo();
-    }
+    getinfo();
