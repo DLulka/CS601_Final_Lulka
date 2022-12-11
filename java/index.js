@@ -2,7 +2,7 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/degree.json';
     function getinfo() {
         fetch(url)
             .then((response) => {
-                console.log(response.status);
+                alert("Loaded");
                 return response.json();
             })
             .then((data) => {
