@@ -128,9 +128,8 @@ h1 {
   }
   
   .certs li:hover {
-    background: #eee;
+    background: rgb(99, 98, 98);
     cursor: pointer;
-    text-emphasis-color: blue;
   }
   
   .certs a:link {
