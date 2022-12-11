@@ -130,6 +130,7 @@ h1 {
   .certs li:hover {
     background: #eee;
     cursor: pointer;
+    text-emphasis-color: blue;
   }
   
   .certs a:link {
