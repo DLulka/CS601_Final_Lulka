@@ -56,6 +56,7 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
     
        
        function  validateName(FirstOrLast, PForL) {
+        alert("Validating name");
         var FoLname = document.getElementById(FirstOrLast);
         var value = FoLname.value;
         var regextest = /^([a-zA-Z]+)$/;
