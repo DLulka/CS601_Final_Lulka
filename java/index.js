@@ -2,7 +2,6 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
     function getinfo() {
         fetch(url)
             .then((response) => {
-                alert("Loaded");
                 return response.json();
             })
             .then((data) => {
@@ -46,5 +45,3 @@ const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
                 console.log(error);
               });
     }
-
-    getinfo();
