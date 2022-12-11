@@ -1,4 +1,4 @@
-const url = 'https://mellow-bonbon-e92766.netlify.app/java/degree.json';
+const url = 'https://mellow-bonbon-e92766.netlify.app/java/certifications.json';
     function getinfo() {
         fetch(url)
             .then((response) => {
