@@ -1,14 +1,18 @@
 h1 {
-    color: red;
-    text-align: center;
-    text-shadow: -1px -1px rgb(0, 190, 204), 1px 1px rgb(0, 99, 102), -3px 0 4px #000;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 32px;
+  color: darkblue; 
+  font-family: 'Courier New', Courier, monospace; 
+  font-size: 8vh; 
+  line-height: 8vh; 
+  font-weight: bold; 
+  margin-bottom: 0px; 
+  margin-top: 3vh; 
+  text-align: center; 
+  text-shadow: 0 1px 1px ivory;
   }
   body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #000428, #789bba);
+    background-color: ivory;
   }
 
   .nav ul {
@@ -58,18 +62,19 @@ h1 {
    
   .nav a {
     text-decoration: none;
-    color: #fff;
+    color: darkgreen;
     display: block;
     transition: .5s;
   }
    
   .nav a:hover {
-    background-color: #005f5f;
+    background-color: slategray;
+    color: darkred;
   }
    
   .nav a.active {
-    background-color: #fff;
-    color: #444;
+    background-color:ivory;
+    color: black;
     cursor: default;
     font-weight: bold;
   }
@@ -83,7 +88,7 @@ h1 {
   }
 
   .roundimg {
-    border-radius: 50%;
+    border-radius: 45%;
   }
 
   .roundbrimg {
@@ -91,10 +96,11 @@ h1 {
   }
 
   p {
-    color:aliceblue;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.4em;
+    color:black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.7vh;
     text-align: justify;
+    padding: 1% 8%;
   }
 
   div {
@@ -151,17 +157,6 @@ video {
   height: auto;
   margin-left: auto;
   margin-right: auto;
-}
-
-.rm ul {
-  background: #3399ff;
-  padding: 20px;
-}
-
-.rm ul li {
-  background: #cce5ff;
-  color: darkblue;
-  margin: 5px;
 }
 
 a[href^="mailto"]::before {
@@ -224,7 +219,7 @@ input[type="submit"] {
 }
 
 table {
-  font-family: 'Open Sans', sans-serif;
+  font-size: 2.7vh;
   width: 750px;
   border-collapse: collapse;
   border: 3px solid #44475C;
@@ -249,4 +244,125 @@ table td {
 }
 table tbody tr:nth-child(2n) td {
   background: #D4D8F9;
+}
+
+ul.menu {
+  padding: 0;
+  list-style: none;
+  width: 400px;
+  margin: 20px auto;
+  font-family: 'Roboto';
+  box-shadow: 0px 0px 25px #00000070;
+  clear: both;
+  display: table;
+}
+ul.menu .list {
+  font-size: 14px;
+  border-bottom: 1px solid #324252;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  vertical-align: sub;
+  background: #3e5165;
+  clear: both;
+}
+ul.menu .list:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+ul.menu .list:before {
+  content: '\f07b';
+  font-family: FontAwesome;
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+ul.menu .list a {
+  text-decoration: none;
+  color: #fff;
+  padding: 17px 0px 17px 45px;
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+}
+ul.menu .list a:hover {
+  background-color: #324252;
+  transition: 300ms all;
+  color: #09fbd2;
+}
+ul.menu .list .items {
+  height: 0px;
+  overflow: hidden;
+}
+ul.menu .list .items a {
+  padding: 17px;
+}
+ul.menu .list .items a:hover {
+  background-color: #3f5d79;
+  color: #fff;
+  transition: 300ms all;
+}
+ul.menu .list:last-child {
+  border-bottom: none;
+}
+ul.menu .active:after {
+  content: "\f106";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+ul.menu .active:before {
+  content: '\f07c';
+  font-family: FontAwesome;
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+ul.menu .active > .items {
+  display: block;
+  background: #23313f;
+  padding: 0px;
+  height: auto;
+  color: #fff;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 200ms;
+  clear: both;
+  float: left;
+  width: 100%;
+}
+ul.menu .active > .items li {
+  padding: 0px;
+  border-bottom: 1px solid #324252;
+  list-style: none;
+}
+ul.menu .active > .items li:last-child {
+  border-color: transparent;
+  padding-bottom: 0px;
+}
+ul.menu .active > .items .active > .items {
+  background-color: #2f4b67;
+}
+ul.menu .active > a {
+  color: #46efa4;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+ul.menu .active .list {
+  background: #697d92;
+}
+ul.menu .active .list a {
+  padding: 17px 0px 17px 45px;
 }

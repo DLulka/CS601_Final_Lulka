@@ -19,6 +19,7 @@
               </div> 
         </header>
         <main>
+            <script src="java/index.js"></script>
             <div id="app">
                 <h1> {{ madrid }}</h1>
                 <img class="roundbrimg" :src="meMadrid" alt="Daniel at Bernabeu" />
@@ -26,16 +27,57 @@
                     a big Merengue fan and suggested we played the FIFA World Cup game. I had never played a soccer video game, let alone watch an entire game, but I agreed because he was super excited for Spain’s 
                     striker, Raul.  As we played together the video game, I started learning about the teams and their top players, especially Real Madrid.  Eventually, I got curious and started watching the World Cup, 
                     following Spain, since most of its players played in “La Liga”, which is the league where Real Madrid plays.  </p>
-                <p> In the video below, you can watch the best goals of my favorite soccer player of all time, Raul. The goals are from when he was playing for Real Madrid. He scored a total of 323 goals for Real Madrid and 44 for Spain.   </p>
+                <p> In the video below, you can watch the best goals of my favorite soccer player of all time, Raul. The goals are from when he was playing for Real Madrid.</p>
                     <video controls muted title="Raul's best goals!">
                         <source src="videos/RaulGoals.mp4" type="video/mp4">
                         <source src="videos/RaulGoals.ogv" type="video/ogv">
                     Your browser does not support the video tag.
                     </video>
                 <p> I started watching all the games of “The Galactics”, which was the nickname that the team had. Some of my favorite players of that time were: </p>
-                <div class="rm">
-                    <ul>
-                        <li v-for="player in players">{{ player }}</li>
+                <div>
+                    <ul class="menu">
+                        <li class="list"><a href="#">JavaScript</a>
+                           <ul class="items">
+                              <li><a href="#"> Angular</a></li>
+                              <li><a href="#"> React</a></li>
+                              <li><a href="#"> Vue</a></li>
+                           </ul>
+                        </li>
+                        <li class="list"><a href="#">Adobe</a>
+                           <ul class="items">
+                              <li> <a href="#" > Photoshop</a></li>
+                              <li> <a href="#" > Illustrator</a></li>
+                              <li> <a href="#" > Dreamweaver</a></li>
+                           </ul>
+                        </li>
+                        <li class="list"><a href="#">Multi-Level</a>
+                           <ul class="items">
+                              <li> <a href="#" > Item 1-1 </a></li>
+                              <li> <a href="#" > Item 1-2 </a></li>
+                              <li class="list"><a href="#">List 1-1</a>
+                                 <ul  class="items">
+                                    <li> <a href="#" > Item 1-1-1</a></li>
+                                    <li> <a href="#" > Item 1-1-2</a></li>
+                                    <li class="list"><a href="#">List 1-2</a>
+                                       <ul  class="items">
+                                          <li> <a href="#" > Item 1-2-1</a></li>
+                                          <li> <a href="#" > Item 1-2-2</a></li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+
+ <!--                        <li class="list" v-for="player in players"><a href="#">{{ player }}</a>
+                            <ul class="items" v-if="player == 'Raul'">
+                                <li v-for="rStat in rStats"><a href="#">{{ rStat }}</a></li>
+                            </ul>
+                            <ul class="items" v-else>
+                                <li v-for="zStat in zStats"><a href="#">{{ zStat }}</a></li>
+                            </ul>
+                        </li>  -->
                     </ul>
                 </div>
                 <p> If you want to learn more about Real Madrid, make sure you visit their webapage by clicking on the image below.</p>
@@ -53,14 +95,18 @@
                       datioLogo: 'images/Datiologo.jpg',
                       players: [
                         'Raul',
-                        'Figo',
-                        'Makelele',
-                        'Zidane',
-                        'Ronaldo',
-                        'Beckham',
-                        'Ramos',
-                        'Casillas',
+                        'Zidane'
                     ],
+                    rStats: [
+                        'Total goals: 383',
+                        'National team: Spain',
+                        'Position: Forward',
+                    ],
+                    zStats: [
+                        'Total goals: 125',
+                        'National team: France',
+                        'Position: Attacking Midfield',
+                    ]
                 },
               })
            </script>
