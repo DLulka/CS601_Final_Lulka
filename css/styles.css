@@ -9,6 +9,7 @@ h1 {
   text-align: center; 
   text-shadow: 0 1px 1px ivory;
   }
+
   body{
     margin: 0;
     padding: 0;
@@ -175,7 +176,7 @@ address {
 }
 
 form {
-  width: 400px;
+  width: 650px;
   padding: 1em;
   border: 2px solid #000;
   border-radius: 1em;
@@ -191,17 +192,17 @@ form div + div {
 
 label {
   display: inline-block;
-  width: 300px;
-  color:rgb(160, 236, 38);
+  width: 470px;
+  color:rgb(0, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.4em;
+  font-size: 3vh;
   text-align: justify;
 }
 
 input,
 textarea {
-  font: 1.3em sans-serif;
-  width: 300px;
+  font: 2.5vh sans-serif;
+  width: 400px;
   border: 1px solid #999;
   padding: 3px;
   background-color: bisque;
@@ -246,123 +247,159 @@ table tbody tr:nth-child(2n) td {
   background: #D4D8F9;
 }
 
-ul.menu {
-  padding: 0;
-  list-style: none;
-  width: 400px;
-  margin: 20px auto;
-  font-family: 'Roboto';
-  box-shadow: 0px 0px 25px #00000070;
-  clear: both;
-  display: table;
-}
-ul.menu .list {
-  font-size: 14px;
-  border-bottom: 1px solid #324252;
-  position: relative;
+
+
+.accordion {
   width: 100%;
-  box-sizing: border-box;
-  height: 50px;
-  vertical-align: sub;
-  background: #3e5165;
-  clear: both;
-}
-ul.menu .list:after {
-  content: "\f107";
-  font-family: FontAwesome;
-  position: absolute;
-  right: 17px;
-  top: 17px;
-  padding: 0px 5px;
-  color: #fff;
-}
-ul.menu .list:before {
-  content: '\f07b';
-  font-family: FontAwesome;
-  position: absolute;
-  left: 17px;
-  top: 17px;
-  padding: 0px 5px;
-  color: #fff;
-}
-ul.menu .list a {
-  text-decoration: none;
-  color: #fff;
-  padding: 17px 0px 17px 45px;
-  display: block;
-  height: 100%;
-  box-sizing: border-box;
-}
-ul.menu .list a:hover {
-  background-color: #324252;
-  transition: 300ms all;
-  color: #09fbd2;
-}
-ul.menu .list .items {
-  height: 0px;
+  max-width: 1080px;
+  height: 550px;
   overflow: hidden;
+  margin: 50px auto;
 }
-ul.menu .list .items a {
-  padding: 17px;
+.accordion ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
 }
-ul.menu .list .items a:hover {
-  background-color: #3f5d79;
-  color: #fff;
-  transition: 300ms all;
+.accordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 16.666%;
+  height: 550px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
 }
-ul.menu .list:last-child {
-  border-bottom: none;
-}
-ul.menu .active:after {
-  content: "\f106";
-  font-family: FontAwesome;
-  position: absolute;
-  right: 17px;
-  top: 17px;
-  padding: 0px 5px;
-  color: #fff;
-}
-ul.menu .active:before {
-  content: '\f07c';
-  font-family: FontAwesome;
-  position: absolute;
-  left: 17px;
-  top: 17px;
-  padding: 0px 5px;
-  color: #fff;
-}
-ul.menu .active > .items {
+.accordion ul li div {
   display: block;
-  background: #23313f;
-  padding: 0px;
-  height: auto;
-  color: #fff;
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: all 200ms;
-  clear: both;
-  float: left;
+  overflow: hidden;
   width: 100%;
 }
-ul.menu .active > .items li {
-  padding: 0px;
-  border-bottom: 1px solid #324252;
-  list-style: none;
+.accordion ul li div a {
+  display: block;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  transition: all 200ms ease;
 }
-ul.menu .active > .items li:last-child {
-  border-color: transparent;
-  padding-bottom: 0px;
+.accordion ul li div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
-ul.menu .active > .items .active > .items {
-  background-color: #2f4b67;
-}
-ul.menu .active > a {
-  color: #46efa4;
+.accordion ul li div a h2 {
+  font-family: Montserrat, sans-serif;
+  text-overflow: clip;
+  font-size: 24px;
   text-transform: uppercase;
-  font-weight: bold;
+  margin-bottom: 2px;
+  top: 10px;
 }
-ul.menu .active .list {
-  background: #697d92;
+.accordion ul li div a p {
+  top: 80px;
+  font-size: 20px;
+  color: #fff;
 }
-ul.menu .active .list a {
-  padding: 17px 0px 17px 45px;
+
+.accordion ul li:nth-child(1) { background-image: url("../images/raul.jpg");}
+.accordion ul li:nth-child(2) { background-image: url("../images/zidane.jpg"); }
+
+
+.accordion ul:hover li { width: 8%; }
+.accordion ul:hover li:hover { width: 60%; }
+.accordion ul:hover li:hover a { background: rgba(0, 0, 0, 0.4); }
+.accordion ul:hover li:hover a * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
 }
+
+@media screen and (max-width: 600px) {
+  .accordion { height: auto; }
+  .accordion ul li,
+  .accordion ul li:hover,
+  .accordion ul:hover li,
+  .accordion ul:hover li:hover {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    -webkit-transition: none;
+    transition: none;
+  }
+  }
+
+  .pcontainer {
+    text-align: center;
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 1% 1%;
+    box-sizing: border-box;
+    height: 10vh;
+  }
+  
+  .container {
+    background-color: white;
+      display: flex;
+      width: 100%;
+      padding: 4% 2%;
+      box-sizing: border-box;
+      height: 75vh;
+    }
+    
+    .box {
+      flex: 1;
+      overflow: hidden;
+      transition: 1s;
+      margin: 0 2%;
+      box-shadow: 0 20px 30px rgba(0,0,0,.1);
+      line-height: 0;
+    }
+    
+    .box > img {
+      width: auto;
+      height: auto;
+      object-fit: none; 
+      transition: 1s;
+    }
+    
+    .box > span {
+      color: white;
+      font-size: 3.8vh;
+      display: block;
+      text-align: center;
+      height: 10vh;
+      line-height: 2.6;
+      background-color: black;
+    }
+    
+    .travels {
+      color: #e69533;
+      font-family: 'Courier New', Courier, monospace; 
+      font-size: 4vh; 
+      line-height: 8vh; 
+      font-weight: bold; 
+      margin-bottom: 0px; 
+      margin-top: 2vh; 
+      text-align: center; 
+      text-shadow: 0 1px 1px #fff;
+    }

@@ -14,6 +14,7 @@
                     <li><a href="work.html">Work</a></li>
                     <li><a href="cert.html">Certifications</a></li>
                     <li><a class="active" href="rm.html">Real Madrid</a></li>
+                    <li><a href="travels.html">Travels</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
               </div> 
@@ -34,51 +35,22 @@
                     Your browser does not support the video tag.
                     </video>
                 <p> I started watching all the games of “The Galactics”, which was the nickname that the team had. Some of my favorite players of that time were: </p>
-                <div>
-                    <ul class="menu">
-                        <li class="list"><a href="#">JavaScript</a>
-                           <ul class="items">
-                              <li><a href="#"> Angular</a></li>
-                              <li><a href="#"> React</a></li>
-                              <li><a href="#"> Vue</a></li>
-                           </ul>
-                        </li>
-                        <li class="list"><a href="#">Adobe</a>
-                           <ul class="items">
-                              <li> <a href="#" > Photoshop</a></li>
-                              <li> <a href="#" > Illustrator</a></li>
-                              <li> <a href="#" > Dreamweaver</a></li>
-                           </ul>
-                        </li>
-                        <li class="list"><a href="#">Multi-Level</a>
-                           <ul class="items">
-                              <li> <a href="#" > Item 1-1 </a></li>
-                              <li> <a href="#" > Item 1-2 </a></li>
-                              <li class="list"><a href="#">List 1-1</a>
-                                 <ul  class="items">
-                                    <li> <a href="#" > Item 1-1-1</a></li>
-                                    <li> <a href="#" > Item 1-1-2</a></li>
-                                    <li class="list"><a href="#">List 1-2</a>
-                                       <ul  class="items">
-                                          <li> <a href="#" > Item 1-2-1</a></li>
-                                          <li> <a href="#" > Item 1-2-2</a></li>
-                                       </ul>
-                                    </li>
-                                 </ul>
-                              </li>
-                           </ul>
-                        </li>
-                     </ul>
-
- <!--                        <li class="list" v-for="player in players"><a href="#">{{ player }}</a>
-                            <ul class="items" v-if="player == 'Raul'">
-                                <li v-for="rStat in rStats"><a href="#">{{ rStat }}</a></li>
-                            </ul>
-                            <ul class="items" v-else>
-                                <li v-for="zStat in zStats"><a href="#">{{ zStat }}</a></li>
-                            </ul>
-                        </li>  -->
+                <div class="accordion">
+                    <ul>
+                      <li>
+                        <div> <a href="#">
+                          <h2>Raul</h2>
+                          <p v-for="rStat in rStats"><span> {{ rStat }} </span></p>
+                          </a> </div>
+                      </li>
+                      <li>
+                        <div> <a href="#">
+                          <h2>Zidane</h2>
+                          <p v-for="zStat in zStats"><span> {{ zStat }} </span></p>
+                          </a> </div>
+                      </li>
                     </ul>
+                  </div>
                 </div>
                 <p> If you want to learn more about Real Madrid, make sure you visit their webapage by clicking on the image below.</p>
                 <a href="https://www.realmadrid.com/en" target="_blank"><img src="images/RMLogo.jpeg" alt="Real Madrid logo link"></a>
@@ -91,12 +63,6 @@
                   data: {
                       madrid: 'Hala Madrid!',
                       meMadrid: 'images/MeBernabeu.JPG',
-                      datio: 'images/Datio.JPG',
-                      datioLogo: 'images/Datiologo.jpg',
-                      players: [
-                        'Raul',
-                        'Zidane'
-                    ],
                     rStats: [
                         'Total goals: 383',
                         'National team: Spain',
@@ -109,6 +75,7 @@
                     ]
                 },
               })
+             
            </script>
         </main>
         <footer>

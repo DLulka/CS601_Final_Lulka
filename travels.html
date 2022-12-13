@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daniel's travels!</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <header>
+        <div class="nav">
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="work.html">Work</a></li>
+              <li><a href="cert.html">Certifications</a></li>
+              <li><a href="rm.html">Real Madrid</a></li>
+              <li><a class="active" href="travels.html">Travels</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+    </header>
+    <body>
+        <main>
+            <div id="app"> 
+                <h1 class="content"> My travels</h1>
+                <div class="pcontainer">
+                    <p class="travels" v-html="typing"></p>
+                </div>
+                <div class="container">
+                    <div class="box"  @mouseover="hovercan = true" @mouseleave="hovercan = false">
+                        <img v-if="hovercan == false" :src="Cancun" alt="Cancun">
+                        <img v-else :src="MeCancun" alt="Daniel at Cancun">
+                        <span>Cancun</span>
+                    </div>
+                    <div class="box" @mouseover="hoverpar = true" @mouseleave="hoverpar = false">
+                        <img v-if="hoverpar == false" :src="Paris" alt="Paris">
+                        <img v-else :src="MeParis" alt="Daniel at Paris">
+                        <span>Paris</span>
+                    </div>
+                    <div class="box" @mouseover="hovervan = true" @mouseleave="hovervan = false">
+                        <img v-if="hovervan == false" :src="Vancouver" alt="Vancouver">
+                        <img v-else :src="MeVancouver" alt="Daniel at Vancouver">
+                        <span>Vancouver</span>
+                    </div>
+                    <div class="box" @mouseover="hovermr = true" @mouseleave="hovermr = false">
+                        <img v-if="hovermr == false" :src="Morocco" alt="Morocco">
+                        <img v-else :src="MeMorocco" alt="Daniel at Morocco">
+                        <span>Morocco</span>
+                </div>
+              </div>
+            </div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    Cancun: 'images/Cancun.jpg',
+                    MeCancun: 'images/MeCancun.jpg',
+                    Paris: 'images/Paris.jpg',
+                    MeParis: 'images/MeParis.jpg',
+                    Vancouver: 'images/Vancouver.jpg',
+                    MeVancouver: 'images/MeVancouver.jpg',
+                    Morocco: 'images/Morocco.jpg',
+                    MeMorocco: 'images/MeMorocco.jpg',
+                    hovercan: false,
+                    hoverpar: false,
+                    hovervan: false,
+                    hovermr: false,
+                    typingText:"I love to travel!   ",
+                    typing:'',
+                    timer:null
+                },
+                mounted(){
+                    this.printer()
+                },
+                methods:{
+                  printer(){
+                        let i = -1
+                        this.timer = setInterval(()=>{
+                            i++
+                            const x = i%this.typingText.length
+                            this.typing += this.typingText[x]
+                        }, 160-(Math.random()*50))
+                    },
+                },
+                watch:{
+                    typing:function(){
+                        if(this.typing.length == this.typingText.length){
+                            this.typing = ''
+                        }
+                    }
+                }
+            })
+         </script>
+    </body>
+</html>
